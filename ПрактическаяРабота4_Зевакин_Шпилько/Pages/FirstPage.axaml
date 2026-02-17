@@ -49,7 +49,7 @@
                 </Button>
 
                 <Button Content="Вычисление третьей функции"
-                        Click="Button_OnClick"
+                        Click="Button_OnClick2"
                         Background="#4299E1"
                         Foreground="White"
                         CornerRadius="8"
