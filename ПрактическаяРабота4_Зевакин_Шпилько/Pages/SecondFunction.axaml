@@ -1,0 +1,158 @@
+<nav:Page xmlns="https://github.com/avaloniaui"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+         xmlns:nav="clr-namespace:WpfLikeAvaloniaNavigation;assembly=WpfLikeAvaloniaNavigation"
+         xmlns:pr14Avalonia="clr-namespace:ПрактическаяРабота4_Зевакин_Шпилько"
+         x:Class="ПрактическаяРабота4_Зевакин_Шпилько.Pages.SecondFunction">
+    <Grid Background="#F0F4F8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Левая панель ввода -->
+        <Border Grid.RowSpan="2" Grid.Column="0"
+                Background="White"
+                CornerRadius="12"
+                BoxShadow="0 4 16 0 #1A000000"
+                Margin="16" Padding="20">
+            <StackPanel Spacing="8" Width="180">
+
+                <TextBlock Text="Параметры" FontSize="16"
+                           FontWeight="Bold" Foreground="#2D3748"
+                           HorizontalAlignment="Center" Margin="0,0,0,8"/>
+
+                <TextBlock Text="X" Foreground="#4A5568" FontWeight="SemiBold"/>
+                <TextBox x:Name="BoxX"
+                         Watermark="Введите X"
+                         CornerRadius="8"
+                         Padding="8">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Введите значение переменной X"/>
+                    </ToolTip.Tip>
+                </TextBox>
+
+                <TextBlock Text="M (i)" Foreground="#4A5568" FontWeight="SemiBold"/>
+                <TextBox x:Name="BoxM"
+                         Watermark="Введите M"
+                         CornerRadius="8"
+                         Padding="8">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Введите количество итераций M"/>
+                    </ToolTip.Tip>
+                </TextBox>
+
+                <TextBlock Text="Функция f(x)" Foreground="#4A5568"
+                           FontWeight="SemiBold" Margin="0,8,0,0"/>
+
+                <Border Background="#EDF2F7" CornerRadius="8" Padding="8">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Выберите функцию для вычисления суммы ряда"/>
+                    </ToolTip.Tip>
+                    <StackPanel Spacing="6">
+                        <RadioButton Content="sh(x)" x:Name="RadioButton_one"
+                                     Foreground="#2D3748">
+                            <ToolTip.Tip>
+                                <ToolTip Content="Гиперболический синус: sh(x)"/>
+                            </ToolTip.Tip>
+                        </RadioButton>
+                        <RadioButton Content="x²" x:Name="RadioButton_two"
+                                     Foreground="#2D3748">
+                            <ToolTip.Tip>
+                                <ToolTip Content="Квадратичная функция: x²"/>
+                            </ToolTip.Tip>
+                        </RadioButton>
+                        <RadioButton Content="eˣ" x:Name="RadioButton_three"
+                                     Foreground="#2D3748">
+                            <ToolTip.Tip>
+                                <ToolTip Content="Показательная функция: eˣ"/>
+                            </ToolTip.Tip>
+                        </RadioButton>
+                    </StackPanel>
+                </Border>
+
+                <Button Content="Вычислить"
+                        x:Name="Button_vicheslit"
+                        Click="Button_vicheslit_Click"
+                        Background="#4299E1"
+                        Foreground="White"
+                        CornerRadius="8"
+                        Padding="8,10"
+                        HorizontalAlignment="Stretch"
+                        Margin="0,12,0,0">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Вычислить результат по введённым значениям X и M"/>
+                    </ToolTip.Tip>
+                </Button>
+
+                <Button Content="Очистить"
+                        x:Name="Button_clear"
+                        Click="Button_clear_Click"
+                        Background="#FC8181"
+                        Foreground="White"
+                        CornerRadius="8"
+                        Padding="8,10"
+                        HorizontalAlignment="Stretch">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Очистить все поля ввода и результат"/>
+                    </ToolTip.Tip>
+                </Button>
+
+                <Button Content="Назад"
+                        x:Name="Button_back"
+                        Click="Button_back_OnClick_OnClick"
+                        Background="#4299E1"
+                        Foreground="White"
+                        CornerRadius="8"
+                        Padding="8,10"
+                        HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Center">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Вернуться на страницу навигации"/>
+                    </ToolTip.Tip>
+                </Button>
+
+            </StackPanel>
+        </Border>
+
+        <!-- Правая панель -->
+        <Border Grid.RowSpan="2" Grid.Column="1"
+                Background="White"
+                CornerRadius="12"
+                BoxShadow="0 4 16 0 #1A000000"
+                Margin="0,16,16,16" Padding="20">
+            <StackPanel Spacing="16" VerticalAlignment="Center">
+
+                <Image Source="C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\Images\123.jpg"
+                       Height="145" Stretch="Uniform">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Формула вычисляемой функции"/>
+                    </ToolTip.Tip>
+                </Image>
+
+                <Border Background="#EDF2F7" CornerRadius="10" Padding="16">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Здесь отобразится результат вычисления"/>
+                    </ToolTip.Tip>
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Результат" Foreground="#718096"
+                                   FontSize="12"/>
+                        <TextBlock x:Name="Box_Rez"
+                                   Text="—"
+                                   FontSize="22"
+                                   FontWeight="Bold"
+                                   Foreground="#2D3748"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</nav:Page>

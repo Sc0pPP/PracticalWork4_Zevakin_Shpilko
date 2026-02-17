@@ -1,0 +1,138 @@
+<nav:Page xmlns="https://github.com/avaloniaui"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+          xmlns:nav="clr-namespace:WpfLikeAvaloniaNavigation;assembly=WpfLikeAvaloniaNavigation"
+          xmlns:pr14Avalonia="clr-namespace:ПрактическаяРабота4_Зевакин_Шпилько"
+          x:Class="ПрактическаяРабота4_Зевакин_Шпилько.Pages.FirstFunction">
+    <Grid Background="#F0F4F8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.RowSpan="2" Grid.Column="0"
+                Background="White"
+                CornerRadius="12"
+                BoxShadow="0 4 16 0 #1A000000"
+                Margin="16" Padding="20">
+            <StackPanel Spacing="8" Width="180">
+
+                <TextBlock Text="Параметры" FontSize="16"
+                           FontWeight="Bold" Foreground="#2D3748"
+                           HorizontalAlignment="Center" Margin="0,0,0,8"/>
+
+                <TextBlock Text="X" Foreground="#4A5568" FontWeight="SemiBold"/>
+                <TextBox x:Name="BoxX"
+                         Watermark="Введите X"
+                         CornerRadius="8"
+                         Padding="8">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Введите значение переменной X"/>
+                    </ToolTip.Tip>
+                </TextBox>
+
+                <TextBlock Text="Y" Foreground="#4A5568" FontWeight="SemiBold"/>
+                <TextBox x:Name="BoxY"
+                         Watermark="Введите Y"
+                         CornerRadius="8"
+                         Padding="8">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Введите значение переменной Y"/>
+                    </ToolTip.Tip>
+                </TextBox>
+
+                <TextBlock Text="Z" Foreground="#4A5568" FontWeight="SemiBold"/>
+                <TextBox x:Name="BoxZ"
+                         Watermark="Введите Z"
+                         CornerRadius="8"
+                         Padding="8">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Введите значение переменной Z"/>
+                    </ToolTip.Tip>
+                </TextBox>
+
+                <Button Content="Вычислить"
+                        x:Name="Button_Vicheslit"
+                        Click="Button_Vicheslit_OnClick"
+                        Background="#4299E1"
+                        Foreground="White"
+                        CornerRadius="8"
+                        Padding="8,10"
+                        HorizontalAlignment="Stretch"
+                        Margin="0,12,0,0"
+                        HorizontalContentAlignment="Center">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Вычислить результат по введённым значениям X, Y, Z"/>
+                    </ToolTip.Tip>
+                </Button>
+
+                <Button Content="Очистить"
+                        x:Name="Button_clear"
+                        Click="Button_clear_OnClick"
+                        Background="#FC8181"
+                        Foreground="White"
+                        CornerRadius="8"
+                        Padding="8,10"
+                        HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Center">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Очистить все поля ввода и результат"/>
+                    </ToolTip.Tip>
+                </Button>
+
+                <Button Content="Назад"
+                        x:Name="Button_back"
+                        Click="Button_back_OnClick_OnClick"
+                        Background="#4299E1"
+                        Foreground="White"
+                        CornerRadius="8"
+                        Padding="8,10"
+                        HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Center">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Вернуться на страницу навигации"/>
+                    </ToolTip.Tip>
+                </Button>
+
+            </StackPanel>
+        </Border>
+
+        <Border Grid.RowSpan="2" Grid.Column="1"
+                Background="White"
+                CornerRadius="12"
+                BoxShadow="0 4 16 0 #1A000000"
+                Margin="0,16,16,16" Padding="20">
+            <StackPanel Spacing="16" VerticalAlignment="Center">
+
+                <Image Source="C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\Images\photo_5219688800559240458_x.jpg"
+                       Stretch="Uniform" Height="120">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Формула вычисляемой функции"/>
+                    </ToolTip.Tip>
+                </Image>
+
+                <Border Background="#EDF2F7" CornerRadius="10" Padding="16">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Здесь отобразится результат вычисления"/>
+                    </ToolTip.Tip>
+                    <StackPanel Spacing="4">
+                        <TextBlock Text="Результат" Foreground="#718096" FontSize="12"/>
+                        <TextBlock x:Name="Box_rez"
+                                   Text="—"
+                                   FontSize="22"
+                                   FontWeight="Bold"
+                                   Foreground="#2D3748"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</nav:Page>

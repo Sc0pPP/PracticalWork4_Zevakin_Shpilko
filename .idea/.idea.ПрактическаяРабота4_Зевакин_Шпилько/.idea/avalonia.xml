@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="ПрактическаяРабота4_Зевакин_Шпилько/MainWindow.axaml" value="ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько.csproj" />
+        <entry key="ПрактическаяРабота4_Зевакин_Шпилько/Pages/FirstFunction.axaml" value="ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько.csproj" />
+        <entry key="ПрактическаяРабота4_Зевакин_Шпилько/Pages/FirstPage.axaml" value="ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько.csproj" />
+        <entry key="ПрактическаяРабота4_Зевакин_Шпилько/Pages/Messagebox.axaml" value="ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько.csproj" />
+        <entry key="ПрактическаяРабота4_Зевакин_Шпилько/Pages/SecondFunction.axaml" value="ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько.csproj" />
+        <entry key="ПрактическаяРабота4_Зевакин_Шпилько/Pages/ThirdFunction.axaml" value="ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько.csproj" />
+        <entry key="ПрактическаяРабота4_Зевакин_Шпилько/Pages/UserControl1.axaml" value="ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

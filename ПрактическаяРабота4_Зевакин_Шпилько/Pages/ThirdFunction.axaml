@@ -1,0 +1,136 @@
+<nav:Page xmlns="https://github.com/avaloniaui"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+          xmlns:nav="clr-namespace:WpfLikeAvaloniaNavigation;assembly=WpfLikeAvaloniaNavigation"
+          xmlns:pr14Avalonia="clr-namespace:ПрактическаяРабота4_Зевакин_Шпилько"
+          x:Class="ПрактическаяРабота4_Зевакин_Шпилько.Pages.ThirdFunction">
+    <Grid Background="#F0F4F8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Border Grid.Column="0"
+                Background="White"
+                CornerRadius="12"
+                BoxShadow="0 4 16 0 #1A000000"
+                Margin="16" Padding="20">
+            <StackPanel Spacing="8" Width="180">
+
+                <TextBlock Text="Параметры" FontSize="16"
+                           FontWeight="Bold" Foreground="#2D3748"
+                           HorizontalAlignment="Center" Margin="0,0,0,8"/>
+
+                <TextBlock Text="X₀" Foreground="#4A5568" FontWeight="SemiBold"/>
+                <TextBox x:Name="BoxX0" Watermark="Введите X₀"
+                         CornerRadius="8" Padding="8">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Начальное значение X (левая граница диапазона)"/>
+                    </ToolTip.Tip>
+                </TextBox>
+
+                <TextBlock Text="Xₖ" Foreground="#4A5568" FontWeight="SemiBold"/>
+                <TextBox x:Name="BoxXk" Watermark="Введите Xₖ"
+                         CornerRadius="8" Padding="8">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Конечное значение X (правая граница диапазона)"/>
+                    </ToolTip.Tip>
+                </TextBox>
+
+                <TextBlock Text="dX" Foreground="#4A5568" FontWeight="SemiBold"/>
+                <TextBox x:Name="BoxDx" Watermark="Введите dX"
+                         CornerRadius="8" Padding="8">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Шаг изменения X между вычислениями"/>
+                    </ToolTip.Tip>
+                </TextBox>
+
+                <TextBlock Text="b" Foreground="#4A5568" FontWeight="SemiBold"/>
+                <TextBox x:Name="BoxB" Watermark="Введите b"
+                         CornerRadius="8" Padding="8">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Значение параметра b в формуле функции"/>
+                    </ToolTip.Tip>
+                </TextBox>
+
+                <TextBlock Text="Ответ" Foreground="#4A5568"
+                           FontWeight="SemiBold" Margin="0,8,0,0"/>
+                <Border Background="#EDF2F7" CornerRadius="8" Padding="8">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Таблица результатов вычисления для каждого X"/>
+                    </ToolTip.Tip>
+                    <ListBox x:Name="ResultList"
+                             Background="Transparent"
+                             MaxHeight="120"
+                             BorderThickness="0"/>
+                </Border>
+
+                <Button Content="Вычислить"
+                        x:Name="Button_Vicheslit"
+                        Click="Button_Vicheslit_OnClick"
+                        Background="#4299E1"
+                        Foreground="White"
+                        CornerRadius="8"
+                        Padding="8,10"
+                        HorizontalAlignment="Stretch"
+                        Margin="0,8,0,0">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Вычислить значения функции и построить график"/>
+                    </ToolTip.Tip>
+                </Button>
+
+                <Button Content="Очистить"
+                        x:Name="Button_clear"
+                        Click="Button_clear_OnClick"
+                        Background="#FC8181"
+                        Foreground="White"
+                        CornerRadius="8"
+                        Padding="8,10"
+                        HorizontalAlignment="Stretch">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Очистить все поля ввода, таблицу и график"/>
+                    </ToolTip.Tip>
+                </Button>
+
+                <Button Content="Назад"
+                        x:Name="Button_back"
+                        Click="Button_back_OnClick_OnClick"
+                        Background="#4299E1"
+                        Foreground="White"
+                        CornerRadius="8"
+                        Padding="8,10"
+                        HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Center">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Вернуться на страницу навигации"/>
+                    </ToolTip.Tip>
+                </Button>
+
+            </StackPanel>
+        </Border>
+        
+        <Border Grid.Column="1"
+                Background="White"
+                CornerRadius="12"
+                BoxShadow="0 4 16 0 #1A000000"
+                Margin="0,16,16,16" Padding="20">
+            <StackPanel Spacing="8">
+                <Image Source="C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\Images\2344.png"
+                       Stretch="Uniform" Height="120">
+                    <ToolTip.Tip>
+                        <ToolTip Content="Формула вычисляемой функции"/>
+                    </ToolTip.Tip>
+                </Image>
+                <Canvas x:Name="ChartCanvas"
+                        Background="#FAFAFA"
+                        Height="320">
+                    <ToolTip.Tip>
+                        <ToolTip Content="График функции по вычисленным значениям"/>
+                    </ToolTip.Tip>
+                </Canvas>
+            </StackPanel>
+        </Border>
+    </Grid>
+</nav:Page>
