@@ -72,3 +72,4 @@ C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\ПрактическаяРабота4_Зевакин_Шпилько.genruntimeconfig.cache
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\ref\ПрактическаяРабота4_Зевакин_Шпилько.dll
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\bin\Debug\net9.0\WpfLikeAvaloniaNavigation.dll
+C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\ПрактическаяРабота4_Зевакин_Шпилько.sourcelink.json
