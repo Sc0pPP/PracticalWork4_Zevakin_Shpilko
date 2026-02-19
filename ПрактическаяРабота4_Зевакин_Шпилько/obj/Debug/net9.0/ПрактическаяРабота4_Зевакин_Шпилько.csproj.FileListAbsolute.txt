@@ -31,6 +31,7 @@ C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\bin\Debug\net9.0\MicroCom.Runtime.dll
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\bin\Debug\net9.0\SkiaSharp.dll
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\bin\Debug\net9.0\Tmds.DBus.Protocol.dll
+C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\bin\Debug\net9.0\WpfLikeAvaloniaNavigation.dll
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\bin\Debug\net9.0\runtimes\win-arm64\native\av_libglesv2.dll
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\bin\Debug\net9.0\runtimes\win-x64\native\av_libglesv2.dll
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\bin\Debug\net9.0\runtimes\win-x86\native\av_libglesv2.dll
@@ -65,11 +66,10 @@ C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\ПрактическаяРабота4_Зевакин_Шпилько.AssemblyInfoInputs.cache
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\ПрактическаяРабота4_Зевакин_Шпилько.AssemblyInfo.cs
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\ПрактическаяРабота4_Зевакин_Шпилько.csproj.CoreCompileInputs.cache
+C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\ПрактическаяРабота4_Зевакин_Шпилько.sourcelink.json
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\________.4DDDD520.Up2Date
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\ПрактическаяРабота4_Зевакин_Шпилько.dll
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\refint\ПрактическаяРабота4_Зевакин_Шпилько.dll
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\ПрактическаяРабота4_Зевакин_Шпилько.pdb
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\ПрактическаяРабота4_Зевакин_Шпилько.genruntimeconfig.cache
 C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\ref\ПрактическаяРабота4_Зевакин_Шпилько.dll
-C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\bin\Debug\net9.0\WpfLikeAvaloniaNavigation.dll
-C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\obj\Debug\net9.0\ПрактическаяРабота4_Зевакин_Шпилько.sourcelink.json

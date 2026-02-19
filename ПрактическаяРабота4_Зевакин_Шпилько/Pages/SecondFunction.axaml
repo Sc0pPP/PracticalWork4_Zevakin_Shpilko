@@ -129,7 +129,7 @@
                 Margin="0,16,16,16" Padding="20">
             <StackPanel Spacing="16" VerticalAlignment="Center">
 
-                <Image Source="C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\Images\123.jpg"
+                <Image Source="../Images/123.jpg"
                        Height="145" Stretch="Uniform">
                     <ToolTip.Tip>
                         <ToolTip Content="Формула вычисляемой функции"/>

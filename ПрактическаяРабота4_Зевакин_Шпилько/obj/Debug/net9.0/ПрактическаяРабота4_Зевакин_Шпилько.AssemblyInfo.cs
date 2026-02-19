@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ПрактическаяРабота4_Зевакин_Шпилько")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db84abf197bc941d649ce9c1267fb01f545d2269")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7311f7a8342a3915bcde728b690ad48ae212b38")]
 [assembly: System.Reflection.AssemblyProductAttribute("ПрактическаяРабота4_Зевакин_Шпилько")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ПрактическаяРабота4_Зевакин_Шпилько")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
