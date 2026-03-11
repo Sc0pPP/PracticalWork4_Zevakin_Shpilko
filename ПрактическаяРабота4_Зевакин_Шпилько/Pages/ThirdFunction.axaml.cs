@@ -6,7 +6,6 @@ using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Controls.Shapes;
 using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using WpfLikeAvaloniaNavigation;
 
@@ -14,6 +13,10 @@ namespace ПрактическаяРабота4_Зевакин_Шпилько.Pa
 
 public partial class ThirdFunction : Page
 {
+    public static double CalculateF(double x, double b)
+    {
+        return Math.Pow(x, 4) + Math.Cos(2 + Math.Pow(x, 3) - b);
+    }
     public ThirdFunction()
     {
         InitializeComponent();
@@ -28,13 +31,64 @@ public partial class ThirdFunction : Page
 
     private void Button_Vicheslit_OnClick(object? sender, RoutedEventArgs e)
     {
+        Vich(BoxX0, BoxXk, BoxDx, BoxB);
+    }
+
+    public bool Vich(TextBox boxX0, TextBox boxXk, TextBox boxDx, TextBox boxB)
+    {
+        if (string.IsNullOrWhiteSpace(boxX0.Text) ||
+            string.IsNullOrWhiteSpace(boxXk.Text) ||
+            string.IsNullOrWhiteSpace(boxDx.Text) ||
+            string.IsNullOrWhiteSpace(boxB.Text))
+        {
+            var mainWindow = (Application.Current.ApplicationLifetime
+                as IClassicDesktopStyleApplicationLifetime)?.MainWindow;
+            var dialog = new Messagebox("Заполните все поля");
+            dialog.ShowDialog(mainWindow);
+            return false;
+        }
+
+        if (!double.TryParse(boxX0.Text.Replace(".", ","), out double x0) ||
+            !double.TryParse(boxXk.Text.Replace(".", ","), out double xk) ||
+            !double.TryParse(boxDx.Text.Replace(".", ","), out double dx) ||
+            !double.TryParse(boxB.Text.Replace(".", ","), out double b))
+        {
+            var mainWindow = (Application.Current.ApplicationLifetime
+                as IClassicDesktopStyleApplicationLifetime)?.MainWindow;
+            var dialog = new Messagebox("Введите корректные числа");
+            dialog.ShowDialog(mainWindow);
+            return false;
+        }
+
+        if (dx <= 0)
+        {
+            var mainWindow = (Application.Current.ApplicationLifetime
+                as IClassicDesktopStyleApplicationLifetime)?.MainWindow;
+            var dialog = new Messagebox("dX должен быть больше 0!");
+            dialog.ShowDialog(mainWindow);
+            return false;
+        }
+
+        if (x0 >= xk)
+        {
+            var mainWindow = (Application.Current.ApplicationLifetime
+                as IClassicDesktopStyleApplicationLifetime)?.MainWindow;
+            var dialog = new Messagebox("X₀ должен быть меньше Xₖ!");
+            dialog.ShowDialog(mainWindow);
+            return false;
+        }
+
+        if ((xk - x0) / dx > 10000)
+        {
+            var mainWindow = (Application.Current.ApplicationLifetime
+                as IClassicDesktopStyleApplicationLifetime)?.MainWindow;
+            var dialog = new Messagebox("Слишком много точек, увеличьте dX!");
+            dialog.ShowDialog(mainWindow);
+            return false;
+        }
+
         try
         {
-            double x0 = double.Parse(BoxX0.Text.Replace(".", ","));
-            double xk = double.Parse(BoxXk.Text.Replace(".", ","));
-            double dx = double.Parse(BoxDx.Text.Replace(".", ","));
-            double b  = double.Parse(BoxB.Text.Replace(".", ","));
-
             _points.Clear();
             ResultList.Items.Clear();
 
@@ -45,76 +99,19 @@ public partial class ThirdFunction : Page
                 ResultList.Items.Add($"{Math.Round(y, 4)}");
             }
 
-            DrawChart();
+            DrawChart(x0, xk, dx, b);
+            return true;
         }
         catch (Exception ex)
         {
             ResultList.Items.Clear();
             ResultList.Items.Add($"Ошибка: {ex.Message}");
+            return false;
         }
     }
 
-    private void DrawChart()
+    private void DrawChart(double x0, double xk, double dx, double b)
     {
-        if (string.IsNullOrWhiteSpace(BoxX0.Text) ||
-            string.IsNullOrWhiteSpace(BoxXk.Text) ||
-            string.IsNullOrWhiteSpace(BoxDx.Text) ||
-            string.IsNullOrWhiteSpace(BoxB.Text))
-        {
-            ResultList.Items.Clear();
-            
-            var mainWindow = (Application.Current.ApplicationLifetime
-                as IClassicDesktopStyleApplicationLifetime)?.MainWindow;
-            var dialogg= new Messagebox("Заполните все поля");
-            dialogg.ShowDialog(mainWindow);
-            return;
-        }
-
-        if (!double.TryParse(BoxX0.Text.Replace(".", ","), out double x0) ||
-            !double.TryParse(BoxXk.Text.Replace(".", ","), out double xk) ||
-            !double.TryParse(BoxDx.Text.Replace(".", ","), out double dx) ||
-            !double.TryParse(BoxB.Text.Replace(".", ","), out double b))
-        {
-            ResultList.Items.Clear();
-            
-            var mainWindow = (Application.Current.ApplicationLifetime
-                as IClassicDesktopStyleApplicationLifetime)?.MainWindow;
-            var dialogg= new Messagebox("Введите корректные числа");
-            dialogg.ShowDialog(mainWindow); 
-            return;
-        }
-
-        if (dx <= 0)
-        {
-            ResultList.Items.Clear();
-            
-            var mainWindow = (Application.Current.ApplicationLifetime
-                as IClassicDesktopStyleApplicationLifetime)?.MainWindow;
-            var dialogg= new Messagebox("dX должен быть больше 0!");
-            dialogg.ShowDialog(mainWindow);
-            return;
-        }
-
-        if (x0 >= xk)
-        {
-            ResultList.Items.Clear();
-            var mainWindow = (Application.Current.ApplicationLifetime
-                as IClassicDesktopStyleApplicationLifetime)?.MainWindow;
-            var dialogg= new Messagebox("X₀ должен быть меньше Xₖ!");
-            dialogg.ShowDialog(mainWindow);
-            return;
-        }
-
-        if ((xk - x0) / dx > 10000)
-        {
-            ResultList.Items.Clear();
-            var mainWindow = (Application.Current.ApplicationLifetime
-                as IClassicDesktopStyleApplicationLifetime)?.MainWindow;
-            var dialogg= new Messagebox("Слишком много точек, увеличьте dX!");
-            dialogg.ShowDialog(mainWindow);
-            return;
-        }
-
         ChartCanvas.Children.Clear();
 
         if (_points.Count < 2) return;
@@ -122,7 +119,6 @@ public partial class ThirdFunction : Page
         double canvasW = ChartCanvas.Bounds.Width;
         double canvasH = ChartCanvas.Bounds.Height;
 
-        
         if (canvasW < 1) canvasW = 500;
         if (canvasH < 1) canvasH = 320;
 
@@ -135,12 +131,11 @@ public partial class ThirdFunction : Page
         double rangeX = maxX - minX == 0 ? 1 : maxX - minX;
         double rangeY = maxY - minY == 0 ? 1 : maxY - minY;
 
-        
         double ToCanvasX(double x) =>
             padding + (x - minX) / rangeX * (canvasW - padding * 2);
         double ToCanvasY(double y) =>
             (canvasH - padding) - (y - minY) / rangeY * (canvasH - padding * 2);
-        
+
         for (int i = 0; i <= 5; i++)
         {
             double gy = padding + i * (canvasH - padding * 2) / 5;
@@ -153,7 +148,7 @@ public partial class ThirdFunction : Page
             };
             ChartCanvas.Children.Add(gridLine);
         }
-        
+
         var polyline = new Polyline
         {
             Stroke = new SolidColorBrush(Color.Parse("#4299E1")),
@@ -166,7 +161,7 @@ public partial class ThirdFunction : Page
 
         polyline.Points = pointsList;
         ChartCanvas.Children.Add(polyline);
-        
+
         foreach (var (x, _) in _points)
         {
             var label = new TextBlock
@@ -186,7 +181,7 @@ public partial class ThirdFunction : Page
         BoxX0.Text = "";
         BoxXk.Text = "";
         BoxDx.Text = "";
-        BoxB.Text  = "";
+        BoxB.Text = "";
         ResultList.Items.Clear();
         ChartCanvas.Children.Clear();
         _points.Clear();
@@ -197,6 +192,6 @@ public partial class ThirdFunction : Page
         if (NavigationService.CanGoBack)
         {
             NavigationService.GoBack();
-        } 
+        }
     }
 }

@@ -5,6 +5,7 @@
          mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
          xmlns:nav="clr-namespace:WpfLikeAvaloniaNavigation;assembly=WpfLikeAvaloniaNavigation"
          xmlns:pr14Avalonia="clr-namespace:ПрактическаяРабота4_Зевакин_Шпилько"
+         xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
          x:Class="ПрактическаяРабота4_Зевакин_Шпилько.Pages.SecondFunction">
     <Grid Background="#F0F4F8">
         <Grid.RowDefinitions>
@@ -128,8 +129,8 @@
                 BoxShadow="0 4 16 0 #1A000000"
                 Margin="0,16,16,16" Padding="20">
             <StackPanel Spacing="16" VerticalAlignment="Center">
-
-                <Image Source="../Images/123.jpg"
+                
+                <Image asyncImageLoader:ImageLoader.Source="https://c.dns-shop.ru/thumb/st1/fit/500/500/65dd4fa197587ff0234fb489654a1610/795501670897bbaf827d082e541274e955d7553b152f8d55d0bd4b63418603ff.jpg"
                        Height="145" Stretch="Uniform">
                     <ToolTip.Tip>
                         <ToolTip Content="Формула вычисляемой функции"/>

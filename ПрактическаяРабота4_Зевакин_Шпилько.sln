@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ПрактическаяРабота4_Зевакин_Шпилько", "ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько.csproj", "{920EEAE7-EC34-43DA-8CD4-28AF808876AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{2F2AD4FD-E5FF-4B26-A4E0-5A0CFD059D56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{920EEAE7-EC34-43DA-8CD4-28AF808876AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{920EEAE7-EC34-43DA-8CD4-28AF808876AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{920EEAE7-EC34-43DA-8CD4-28AF808876AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2AD4FD-E5FF-4B26-A4E0-5A0CFD059D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2AD4FD-E5FF-4B26-A4E0-5A0CFD059D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2AD4FD-E5FF-4B26-A4E0-5A0CFD059D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2AD4FD-E5FF-4B26-A4E0-5A0CFD059D56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
