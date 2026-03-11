@@ -1,0 +1,43 @@
+is_global = true
+build_property.AvaloniaNameGeneratorIsEnabled = true
+build_property.AvaloniaNameGeneratorBehavior = InitializeComponent
+build_property.AvaloniaNameGeneratorDefaultFieldModifier = internal
+build_property.AvaloniaNameGeneratorFilterByPath = *
+build_property.AvaloniaNameGeneratorFilterByNamespace = *
+build_property.AvaloniaNameGeneratorViewFileNamingStrategy = NamespaceAndClassName
+build_property.AvaloniaNameGeneratorAttachDevTools = true
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ПрактическаяРабота4_Зевакин_Шпилько
+build_property.ProjectDir = C:\Users\Scop\RiderProjects\ПрактическаяРабота4_Зевакин_Шпилько\ПрактическаяРабота4_Зевакин_Шпилько\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Scop/RiderProjects/ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько/App.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Scop/RiderProjects/ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Scop/RiderProjects/ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько/Pages/FirstFunction.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Scop/RiderProjects/ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько/Pages/FirstPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Scop/RiderProjects/ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько/Pages/Messagebox.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Scop/RiderProjects/ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько/Pages/SecondFunction.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Scop/RiderProjects/ПрактическаяРабота4_Зевакин_Шпилько/ПрактическаяРабота4_Зевакин_Шпилько/Pages/ThirdFunction.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
